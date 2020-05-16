@@ -8,12 +8,13 @@ const quesController=require('../../../controllers/api/v1/ques');
 
 router.post('/create',quesController.createQues);
 router.post('/:id/options/create',quesController.AddOption);
-// router.get('questions/:id/delete',quesController.remove);
 
 
+ router.delete('/:id/delete',quesController.deleteQuestion);
 
-// router.use('/ans',require('./ans'));
+ 
 
+router.get('/:id', quesController.getques);
 
 module.exports =router;
 
